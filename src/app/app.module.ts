@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeModule } from './welcome/welcome.module';
 import { CustomerModule } from './customer/customer.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { CustomerModule } from './customer/customer.module';
     AppRoutingModule,
     BrowserAnimationsModule,
     WelcomeModule,
-    CustomerModule
+    CustomerModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
