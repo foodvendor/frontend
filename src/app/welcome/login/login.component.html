@@ -1,16 +1,24 @@
 <!-- <mat-form-field>
   <input matInput placeholder="Favorite food" value="Sushi">
 </mat-form-field> -->
-<div class="container">
+<div class="container" align="center">
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit();loginForm.reset()">
+  <img class="mb-4" src="assets/img/tiffin3.png" alt="" width="72" height="72">
+  <H1>Login Form</H1>
+  <hr>
+  <!-- <h4>Enter Username</h4> -->
+  
   <mat-form-field appearance="outline">
     <mat-label>Username</mat-label>
     <input matInput placeholder="someone@example.com" type="text" formControlName="username">
   </mat-form-field>
+  <br>
+  <!-- <h4>Enter Password</h4> -->
   <mat-form-field appearance="outline">
     <mat-label>Password</mat-label>
     <input matInput [type]="hide?'password':'text'" formControlName="password">    
   </mat-form-field>
+  <br>
   <button mat-raised-button color="primary">Submit</button>
 </form>
 
