@@ -17,53 +17,47 @@
     <button mat-button>SHARE</button>
   </mat-card-actions>
 </mat-card> -->
-<mat-card>
-  <mat-card-header>
-    <h5>
-      <strong>Sign up</strong>
-    </h5>
-  </mat-card-header>
-  <mat-card-content>
-    <form [formGroup]="registerForm">
-      <mat-form-field appearance="outline">
-        <mat-label>First name</mat-label>
-        <input matInput type="text" formControlName="firstName">
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>Last name</mat-label>
-        <input matInput type="text" formControlName="lastName">
-      </mat-form-field>
-      <mat-form-field appearance="outline">
-        <mat-label>E-mail</mat-label>
-        <input matInput type="email" formControlName="email">
-      </mat-form-field>
-      <div formGroupName="address">
-        <mat-form-field appearance="outline">
-          <mat-label>Address Line 1</mat-label>
-          <input matInput type="text" formControlName="add1">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Address Line 2</mat-label>
-          <input matInput type="text" formControlName="add2">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>City</mat-label>
-          <input matInput type="text" formControlName="city">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>State</mat-label>
-          <input matInput type="text" formControlName="state">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Zipcode</mat-label>
-          <input matInput type="number" formControlName="zipcode">
-        </mat-form-field>
-        <mat-form-field appearance="outline">
-          <mat-label>Country</mat-label>
-          <input matInput type="text" formControlName="country">
-        </mat-form-field>
+ <div class="signup-form">
+  <form [formGroup]="registerForm">
+    <h2>Register</h2>
+    <p class="hint-text">Create your account. It's free and only takes a minute.</p>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-xs-6"><input type="text" class="form-control" name="first_name" placeholder="First Name"
+            required="required"></div>
+        <div class="col-xs-6"><input type="text" class="form-control" name="last_name" placeholder="Last Name"
+            required="required"></div>
       </div>
-      <button mat-raised-button color="primary">Register</button>
-    </form>
-  </mat-card-content>
-</mat-card>
+    </div>
+    <div class="form-group">
+      <input type="email" class="form-control" name="email" placeholder="Email" required="required">
+    </div>
+    <div class="form-group">
+      <input type="text" class="form-control" name="address" placeholder="Address" required="required">
+    </div>
+    <div class="form-group">
+      <div class="row">
+        <div class="col-xs-6"><input type="text" class="form-control" name="city" placeholder="City"
+            required="required"></div>
+        <div class="col-xs-6"><input type="text" class="form-control" name="state" placeholder="State"
+            required="required"></div>
+      </div>
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="password" placeholder="Password" required="required">
+    </div>
+    <div class="form-group">
+      <input type="password" class="form-control" name="confirm_password" placeholder="Confirm Password"
+        required="required">
+    </div>
+    <div class="form-group">
+      <label class="checkbox-inline"><input type="checkbox" required="required"> I accept the <a href="#">Terms of
+          Use</a> &amp; <a href="#">Privacy Policy</a></label>
+    </div>
+    <div class="form-group">
+      <button type="submit" class="btn btn-success btn-lg btn-block">Register Now</button>
+    </div>
+  </form>
+  <div class="text-center">Already have an account? <a href="#">Sign in</a></div>
+</div>
+
