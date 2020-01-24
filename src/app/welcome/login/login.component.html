@@ -1,17 +1,38 @@
 <!-- <mat-form-field>
   <input matInput placeholder="Favorite food" value="Sushi">
 </mat-form-field> -->
-<div class="container">
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit();loginForm.reset()">
-  <mat-form-field appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="someone@example.com" type="text" formControlName="username">
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Password</mat-label>
-    <input matInput [type]="hide?'password':'text'" formControlName="password">    
-  </mat-form-field>
-  <button mat-raised-button color="primary">Submit</button>
-</form>
-
-</div>
+<body>
+  <table align="center" >
+  <div class="container">
+    
+    <th><h2>Login Here...!</h2> </th>
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit();loginForm.reset()">
+    <tr>
+      <td>USERNAME</td>
+      <td><mat-form-field appearance="outline">
+      <mat-label>Username</mat-label>
+      <input matInput placeholder="someone@example.com" type="text" formControlName="username">
+    </mat-form-field></td>
+  
+  </tr>
+     
+    <br>
+  
+    <tr>
+     
+      <td>PASSWORD</td>
+      <td><mat-form-field appearance="outline">
+   
+        <mat-label>Password</mat-label>
+        <input matInput [type]="hide?'password':'text'" formControlName="password">    
+      </mat-form-field></td>
+    </tr>
+    <button style="color: black;background-color: gold;box-sizing: ;">Submit</button>
+    
+  </form>
+  
+  </div>
+  </table>
+  
+  
+</body>
