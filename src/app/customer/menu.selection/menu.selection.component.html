@@ -1,8 +1,8 @@
-<mat-card>
+<!-- <mat-card class="radio1">
   <mat-card-header>
-    <h5>
+    <h4>
       <strong>Select your menu</strong>
-    </h5>
+    </h4>
   </mat-card-header>
   <mat-card-content>
     <form formGroup="menuSelect">
@@ -11,10 +11,12 @@
           <mat-label>Full Box</mat-label>
           <input matInput type="number" formControlName="fullBox">
         </mat-form-field>
+        <br>
         <mat-form-field appearance="outline">
           <mat-label>Half Box ( Half Rice + 2 Chapatis )</mat-label>
           <input matInput type="number" formControlName="halfBox1">
         </mat-form-field>
+        <br> 
         <mat-form-field appearance="outline">
           <mat-label>Half Box ( 4 Chapatis only)</mat-label>
           <input matInput type="number" formControlName="halfBox2">
@@ -25,6 +27,7 @@
           <label class="mat-h2">Sabji</label><br/>
             <mat-radio-group aria-label="Select an option">
                 <mat-radio-button value="item1">Sabji1</mat-radio-button>
+                <br>
                 <mat-radio-button value="item2">Sabji2</mat-radio-button>
             </mat-radio-group>
       </div>
@@ -32,4 +35,46 @@
       <button mat-raised-button color="primary">Place Order</button>
     </form>
   </mat-card-content>
-</mat-card>
+</mat-card> -->
+
+
+
+<div class="div1">
+  <form formGroup="menuSelect">
+    <header>
+      <h2><img class="mb-4" src="assets/img/tiffin3.png" alt="" width="62" height="62">
+        <strong>Select your menu</strong>
+      </h2>
+    </header>
+    <div formGroupName="tiffin">
+
+      <label>Full Box</label>
+      <input placeholder="Enter quantity" type="number" formControlName="fullBox">
+
+      <br>
+      
+
+      <label>Half Box ( Half Rice + 2 Chapatis )</label>
+      <input placeholder="Enter quantity" type="number" formControlName="halfBox1">
+
+      <br>
+
+      <label>Half Box ( 4 Chapatis only)</label>
+      <input placeholder="Enter quantity" type="number" formControlName="halfBox2">
+    </div>
+
+    <div>
+      <label class="radio1"> Sabji1
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="radio1"> Sabji2
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      
+    </div>
+    <br>
+    <button mat-raised-button color="primary">Place Order</button>
+  </form>
+</div>
