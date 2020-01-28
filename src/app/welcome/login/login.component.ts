@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl } from '@angular/forms';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -8,17 +9,32 @@ import { FormGroup, FormControl } from '@angular/forms';
 })
 export class LoginComponent implements OnInit {
 
-  hide=true;
-  loginForm = new FormGroup({
-    username: new FormControl(''),
-    password: new FormControl(''),
-  })
-  constructor() { }
+  username =''
+  password :any;
+  errormsg = 'invalid Credentials'
+  invalidLogin = false
+  // hide=true;
+  // loginForm = new FormGroup({
+  //   username: new FormControl(''),
+  //   password: new FormControl(''),
+  // })
+  constructor(private router:Router) { }
 
   ngOnInit() {
   }
 
-  onSubmit(){
-    console.log(this.loginForm.value);
+  handleLogin(){
+    if(this.username=='ashish' && this.password==12345)
+    {
+      console.log('login successful ' + this.username + this.password)
+      this.router.navigate(['modify'])
+      this.invalidLogin = false
+    }
+    else{
+      console.log('login successful ' + this.username + this.password)
+      console.log('login unsuccessful')
+      this.invalidLogin = true
+    }
+    
   }
 }

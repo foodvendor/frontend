@@ -1,25 +1,69 @@
-<!-- <mat-form-field>
-  <input matInput placeholder="Favorite food" value="Sushi">
-</mat-form-field> -->
-<div class="container" align="center">
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit();loginForm.reset()">
-  <img class="mb-4" src="assets/img/tiffin3.png" alt="" width="72" height="72">
+
+<!-- <div class="container" align="center">
+
+  <img class="mb-4" src="assets/img/tiffin3.png" alt="" width="52" height="102">
   <H1>Login Form</H1>
   <hr>
-  <!-- <h4>Enter Username</h4> -->
+ 
   
-  <mat-form-field appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="someone@example.com" type="text" formControlName="username" required>
-  </mat-form-field>
-  <br>
-  <!-- <h4>Enter Password</h4> -->
-  <mat-form-field appearance="outline">
-    <mat-label>Password</mat-label>
-    <input matInput [type]="hide?'password':'text'" formControlName="password" required>    
-  </mat-form-field>
-  <br>
-  <button mat-raised-button color="primary">Submit</button>
-</form>
+  
+  {{errormsg}}
+  <div class="form-group">
+    <input [(ngModel)]="username" type="text" class="form-control" name="username" placeholder="Username" required >
+  </div>
+  
+  
+  <div class="form-group">
+    <input [(ngModel)]="password" type="password" class="form-control" name="password" placeholder="Password" required>
+  </div>
+  
 
+  <button (click)=handleLogin() class="btn btn-success btn-lg btn-block">Submit</button>
+  <br>
+  <p class="message">Not registered? <a href="register">Create an account</a></p>
+
+
+</div> -->
+<div class="container h-100">
+  <div class="d-flex justify-content-center h-100">
+    <div class="user_card">
+      <div class="d-flex justify-content-center">
+        <div class="brand_logo_container">
+          <img src="assets\img\tiffin3.png" class="brand_logo" alt="Logo">
+        </div>
+      </div>
+      <div class="d-flex justify-content-center form_container">
+        <form>
+          <small *ngIf='invalidLogin'>{{errormsg}}</small>
+          <div class="input-group mb-3">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-user"></i></span>
+            </div>
+            <input type="text" name="username" class="form-control input_user" placeholder="username" [(ngModel)]="username">
+          </div>
+          <div class="input-group mb-2">
+            <div class="input-group-append">
+              <span class="input-group-text"><i class="fas fa-key"></i></span>
+            </div>
+            <input type="password" name="password" class="form-control input_pass" placeholder="password" [(ngModel)]="password">
+          </div>
+          <div class="form-group">
+            <div class="custom-control custom-checkbox">
+              <input type="checkbox" class="custom-control-input" id="customControlInline">
+              <label class="custom-control-label" for="customControlInline">Remember me</label>
+            </div>
+          </div>
+            <div class="d-flex justify-content-center mt-3 login_container">
+         <button type="button" name="button" class="btn login_btn" (click)=handleLogin()>Login</button>
+         </div>
+        </form>
+      </div>
+  
+      <div class="mt-4">
+        <div class="d-flex justify-content-center links">
+          Don't have an account? <a href="register" class="ml-2">Sign Up</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
