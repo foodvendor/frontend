@@ -1,22 +1,34 @@
 import { Component, OnInit } from '@angular/core';
 
+export interface Bill {
+  date: Number;
+  morning: String;
+  evening: String;
+}
+
+const BILL_DATA: Bill[] = [
+  { date: 1, morning: '', evening: '' },
+  { date: 2, morning: '', evening: '' },
+  { date: 3, morning: '', evening: '' },
+  { date: 4, morning: '', evening: '' }
+];
+
 @Component({
   selector: 'app-bill',
   templateUrl: './bill.component.html',
   styleUrls: ['./bill.component.css']
 })
+
+
 export class BillComponent implements OnInit {
-  day: Number;
-  dataTable: any;
+
+  displayedColumns: string[] = ['Date', 'Morning', 'Evening'];
+  dataSource=BILL_DATA;
   constructor() {
-    this.day = 1;
-    this.dataTable = [];
   }
 
 
   ngOnInit() {
-    for (let i = 1; i <= 31; i++)
-      this.dataTable[i] = i;
   }
 
 }

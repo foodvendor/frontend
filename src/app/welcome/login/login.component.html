@@ -1,17 +1,35 @@
-<!-- <mat-form-field>
-  <input matInput placeholder="Favorite food" value="Sushi">
-</mat-form-field> -->
-<div class="container">
-<form [formGroup]="loginForm" (ngSubmit)="onSubmit();loginForm.reset()">
-  <mat-form-field appearance="outline">
-    <mat-label>Username</mat-label>
-    <input matInput placeholder="someone@example.com" type="text" formControlName="username">
-  </mat-form-field>
-  <mat-form-field appearance="outline">
-    <mat-label>Password</mat-label>
-    <input matInput [type]="hide?'password':'text'" formControlName="password">    
-  </mat-form-field>
-  <button mat-raised-button color="primary">Submit</button>
-</form>
 
-</div>
+
+
+<div class="container" align="center">
+
+  <img class="mb-4" src="assets/img/tiffin3.png" alt="" width="40" height="102">
+  <H2>Login Form</H2>
+
+  <div id="invalid" class="alert alert-warning" role="alert" *ngIf='invalidLogin'>{{errorMessage}}</div>
+  <div>
+   <form #myform="ngForm" (ngSubmit)="handleLogin(myform.value)" > 
+    
+      <div>
+        <label>Email </label>
+        <input type="text" ngModel class="form-control" name="studentEmail" style="margin-left: 3em;">
+      </div>
+
+      <div >
+        <label>Password </label>
+        <input type="password" ngModel class="form-control" name="studentPassword" style="margin-left: 1em;">
+      </div>
+    
+    <div>
+      <button type="submit" class="btn btn-success" style="width:150px; margin-left: 1em; margin-right: 1em;">Submit</button>
+      <button type="reset" class="btn btn-warning" style="width:150px">Reset</button>
+    </div>
+
+    <div>
+      <p class="message" style="margin-left: 3em;">Not registered? <a href="#">Create an account</a></p>
+    </div>
+  </form>
+
+  </div>
+
+

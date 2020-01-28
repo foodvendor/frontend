@@ -1,0 +1,48 @@
+ <div class="container">
+click here  
+<button (click)="getWelcomeMessage()">Get getWelcome Message</button>
+</div> 
+
+
+
+
+
+<div class="div1">
+  <form formGroup="menuSelect">
+    <header>
+      <h2><img class="mb-4" src="assets/img/tiffin3.png" alt="" width="62" height="62">
+        <strong>Select your menu</strong>
+      </h2>
+    </header>
+    <div formGroupName="tiffin">
+
+      <label>Full Box</label>
+      <input placeholder="Enter quantity" type="number" formControlName="fullBox">
+
+      <br>
+      
+
+      <label>Half Box ( Half Rice + 2 Chapatis )</label>
+      <input placeholder="Enter quantity" type="number" formControlName="halfBox1">
+
+      <br>
+
+      <label>Half Box ( 4 Chapatis only)</label>
+      <input placeholder="Enter quantity" type="number" formControlName="halfBox2">
+    </div>
+
+    <div>
+      <label class="radio1"> Sabji1
+        <input type="radio" checked="checked" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      <label class="radio1"> Sabji2
+        <input type="radio" name="radio">
+        <span class="checkmark"></span>
+      </label>
+      
+    </div>
+    <br>
+    <button mat-raised-button color="primary">Place Order</button>
+  </form>
+
