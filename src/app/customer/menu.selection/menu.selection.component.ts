@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl } from '@angular/forms';
+import { WelcomeDataService } from 'src/app/service/data/welcome-data.service';
 @Component({
   selector: 'app-menu.selection',
   templateUrl: './menu.selection.component.html',
@@ -18,10 +19,9 @@ export class MenuSelectionComponent implements OnInit {
     item1: new FormControl(''),
     item2: new FormControl('')
   });
-  constructor() { }
+  constructor(private service:WelcomeDataService) { }
 
   ngOnInit() {
   }
 
 }
-0

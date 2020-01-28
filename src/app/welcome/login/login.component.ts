@@ -1,7 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
 import { Router } from '@angular/router';
 
+import {Student} from '../../../app/model/student';
+import { LoginService } from 'src/app/service/student/login.service';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -9,32 +10,47 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent implements OnInit {
 
-  username =''
-  password :any;
-  errormsg = 'invalid Credentials'
+  message:string='';
+  studentName:'';
+  student:Student;  
+  errorMessage ='Invalid credintals'
   invalidLogin = false
-  // hide=true;
-  // loginForm = new FormGroup({
-  //   username: new FormControl(''),
-  //   password: new FormControl(''),
-  // })
-  constructor(private router:Router) { }
+   //router is required when one component want to make use of another component
+  //Router is the dependency of the login component
+  // private loginsvc:LoginService
+  constructor(private router:Router,
+    private loginsvc:LoginService) {
+      this.student=new Student();
+     }
 
   ngOnInit() {
   }
 
-  handleLogin(){
-    if(this.username=='ashish' && this.password==12345)
-    {
-      console.log('login successful ' + this.username + this.password)
-      this.router.navigate(['modify'])
-      this.invalidLogin = false
-    }
-    else{
-      console.log('login successful ' + this.username + this.password)
-      console.log('login unsuccessful')
-      this.invalidLogin = true
-    }
-    
+  handleLogin(student){
+    console.log("Inside handleLogin");
+   console.log(student);
+
+   this.loginsvc.getLoginDetails(student).then(
+     response=>{
+      sessionStorage.setItem('authenticateUser',response.studentName);
+      this.router.navigate(['/todaysMenu',response.studentName]);
+      console.log(response);
+      
+     }).catch(error=>{
+      this.invalidLogin=true 
+     })
+   
+  //  if(this.loginsvc.getLoginDetails(this.student))
+  //  { 
+     
+  //    this.router.navigate(['todaysMenu',this.student.studentName])
+  //    this.invalidLogin=false;
+  //   // console.log('hello',this.username);
+  //  } 
+  // else
+  // { 
+  //   this.invalidLogin=true 
+  // } 
+
   }
 }

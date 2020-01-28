@@ -7,7 +7,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { HomepageComponent } from './homepage/homepage.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [LoginComponent, RegisterComponent, HomepageComponent],
   imports: [
@@ -15,6 +15,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     MaterialModule,
     ReactiveFormsModule,
     FormsModule,BrowserModule,
+    HttpClientModule,
     NgbModule
   ],
   exports:[
@@ -24,3 +25,4 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
   ]
 })
 export class WelcomeModule { }
+

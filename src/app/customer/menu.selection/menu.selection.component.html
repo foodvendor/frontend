@@ -1,42 +1,108 @@
+<div class="row">
+  <div class="column" style="margin-left: 1em;">
 
-
-
-<div class="div1">
-  <form formGroup="menuSelect">
-    <header>
-      <h2><img class="mb-4" src="assets/img/tiffin3.png" alt="" width="62" height="62">
-        <strong>Select your menu</strong>
-      </h2>
-    </header>
-    <div formGroupName="tiffin">
-
-      <label>Full Box</label>
-      <input placeholder="Enter quantity" type="number" formControlName="fullBox">
-
-      <br>
-      
-
-      <label>Half Box ( Half Rice + 2 Chapatis )</label>
-      <input placeholder="Enter quantity" type="number" formControlName="halfBox1">
-
-      <br>
-
-      <label>Half Box ( 4 Chapatis only)</label>
-      <input placeholder="Enter quantity" type="number" formControlName="halfBox2">
+    <div class="card" style="width: 15rem; margin: 1em;">
+      <img class="card-img-top" src="assets\img\chapati.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>chapati</B></p>
+      </div>
+    </div>
+    <div class="card" style="width: 15rem;margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\bhindi.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>bhindi</B></p>
+      </div>
+    </div>
+    <div class="card" style="width: 15rem;margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\Gavarchi Bhaji.JPG" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B> Gavarchi Bhaji</B></p>
+      </div>
     </div>
 
-    <div>
-      <label class="radio1"> Sabji1
-        <input type="radio" checked="checked" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      <label class="radio1"> Sabji2
-        <input type="radio" name="radio">
-        <span class="checkmark"></span>
-      </label>
-      
+  </div>
+  <div class="column">
+
+    <div class="card" style="width: 15rem; margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\ghevda.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>ghevda</B></p>
+      </div>
     </div>
-    <br>
-    <button mat-raised-button color="primary">Place Order</button>
-  </form>
+    <div class="card" style="width: 15rem;margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\green-peas-curry.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>green-peas-curry</B> </p>
+      </div>
+    </div>
+    <div class="card" style="width: 15rem;margin: 1em;">
+      <img class="card-img-top" src="assets\img\jalebi.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>jalebi</B> </p>
+      </div>
+    </div>
+
+  </div>
+  <div class="column">
+
+    <div class="card" style="width: 15rem; margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\mix_veg.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>mix_veg</B> </p>
+      </div>
+    </div>
+    <div class="card" style="width: 15rem;margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\potato sabji.JPG" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>potato sabji</B> </p>
+      </div>
+    </div>
+    <div class="card" style="width: 15rem;margin: 1em;">
+      <img class="card-img-top" src="assets\img\menu\sabji\Aloo_Matar_Paneer.jpg" style="height: 10rem;" alt="Card image cap">
+      <div class="card-body">
+        <p class="card-text"><B>Aloo_Matar_Paneer</B> </p>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="div1">
+    <form formGroup="menuSelect">
+      <header>
+        <h2><img class="mb-4" src="assets/img/tiffin3.png" alt="" width="62" height="62">
+          <strong>Select your menu</strong>
+        </h2>
+      </header>
+      <div formGroupName="tiffin">
+
+        <label>Full Box</label>
+        <input placeholder="Enter quantity" type="number" formControlName="fullBox">
+
+        <br>
+
+
+        <label>Half Box ( Half Rice + 2 Chapatis )</label>
+        <input placeholder="Enter quantity" type="number" formControlName="halfBox1">
+
+        <br>
+
+        <label>Half Box ( 4 Chapatis only)</label>
+        <input placeholder="Enter quantity" type="number" formControlName="halfBox2">
+      </div>
+
+      <div>
+        <label class="radio1"> Sabji1
+          <input type="radio" checked="checked" name="radio">
+          <span class="checkmark"></span>
+        </label>
+        <label class="radio1"> Sabji2
+          <input type="radio" name="radio">
+          <span class="checkmark"></span>
+        </label>
+
+      </div>
+      <br>
+      <button mat-raised-button color="primary">Place Order</button>
+    </form>
+  </div>
 </div>
