@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { WelcomeModule } from './welcome/welcome.module';
 import { CustomerModule } from './customer/customer.module';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
@@ -19,6 +21,7 @@ import { FormsModule } from '@angular/forms';
     WelcomeModule,
     CustomerModule,
     FormsModule
+   
   ],
   providers: [],
   bootstrap: [AppComponent]
