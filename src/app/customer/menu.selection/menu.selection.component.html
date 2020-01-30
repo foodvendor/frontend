@@ -14,7 +14,8 @@
       </div>
     </div>
     <div class="card" style="width: 15rem;margin: 1em;">
-      <img class="card-img-top" src="assets\img\menu\sabji\Gavarchi Bhaji.JPG" style="height: 10rem;" alt="Card image cap">
+      <img class="card-img-top" src="assets\img\menu\sabji\Gavarchi Bhaji.JPG" style="height: 10rem;"
+        alt="Card image cap">
       <div class="card-body">
         <p class="card-text"><B> Gavarchi Bhaji</B></p>
       </div>
@@ -30,7 +31,8 @@
       </div>
     </div>
     <div class="card" style="width: 15rem;margin: 1em;">
-      <img class="card-img-top" src="assets\img\menu\sabji\green-peas-curry.jpg" style="height: 10rem;" alt="Card image cap">
+      <img class="card-img-top" src="assets\img\menu\sabji\green-peas-curry.jpg" style="height: 10rem;"
+        alt="Card image cap">
       <div class="card-body">
         <p class="card-text"><B>green-peas-curry</B> </p>
       </div>
@@ -52,13 +54,15 @@
       </div>
     </div>
     <div class="card" style="width: 15rem;margin: 1em;">
-      <img class="card-img-top" src="assets\img\menu\sabji\potato sabji.JPG" style="height: 10rem;" alt="Card image cap">
+      <img class="card-img-top" src="assets\img\menu\sabji\potato sabji.JPG" style="height: 10rem;"
+        alt="Card image cap">
       <div class="card-body">
         <p class="card-text"><B>potato sabji</B> </p>
       </div>
     </div>
     <div class="card" style="width: 15rem;margin: 1em;">
-      <img class="card-img-top" src="assets\img\menu\sabji\Aloo_Matar_Paneer.jpg" style="height: 10rem;" alt="Card image cap">
+      <img class="card-img-top" src="assets\img\menu\sabji\Aloo_Matar_Paneer.jpg" style="height: 10rem;"
+        alt="Card image cap">
       <div class="card-body">
         <p class="card-text"><B>Aloo_Matar_Paneer</B> </p>
       </div>
@@ -75,32 +79,44 @@
       </header>
       <div formGroupName="tiffin">
 
-        <label>Full Box</label>
-        <input placeholder="Enter quantity" type="number" formControlName="fullBox">
+        <label class="radio1"> Full box
+          <input type="radio" checked="checked" name="box" value="full" (change)="onItemChange($event)">
+          <span class="checkmark"></span>
+        </label>
+        <input placeholder="Enter quantity" type="number" formControlName="fullBox" [disabled]="disableFull">
 
         <br>
 
 
-        <label>Half Box ( Half Rice + 2 Chapatis )</label>
-        <input placeholder="Enter quantity" type="number" formControlName="halfBox1">
+        <label class="radio1"> Half box
+          <input type="radio" name="box" value="half1" (change)="onItemChange($event)">
+          <span class="checkmark"></span>
+        </label>
+        <input placeholder="Enter quantity" type="number" formControlName="halfBox1" [disabled]="disableHalf1">
 
         <br>
 
-        <label>Half Box ( 4 Chapatis only)</label>
-        <input placeholder="Enter quantity" type="number" formControlName="halfBox2">
+        <label class="radio1"> Half box( 4 Chapatis only)
+          <input type="radio" name="box" value="half2" (change)="onItemChange($event)">
+          <span class="checkmark"></span>
+        </label>
+        <!-- <label>Half Box ( 4 Chapatis only)</label> -->
+        <input placeholder="Enter quantity" type="number" formControlName="halfBox2" [disabled]="disableHalf2">
       </div>
 
       <div>
         <label class="radio1"> Sabji1
-          <input type="radio" checked="checked" name="radio">
+          <input type="radio" checked="checked" name="sabji">
           <span class="checkmark"></span>
         </label>
         <label class="radio1"> Sabji2
-          <input type="radio" name="radio">
+          <input type="radio" name="sabji">
           <span class="checkmark"></span>
         </label>
-
       </div>
+
+
+
       <br>
       <button mat-raised-button color="primary">Place Order</button>
     </form>

@@ -51,6 +51,7 @@ input[type=number], select {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+  
   }
   
   /* Hide the browser's default radio button */
@@ -69,11 +70,14 @@ input[type=number], select {
     width: 25px;
     background-color: #eee;
     border-radius: 50%;
+    border: 1px solid gray;
+    
   }
   
   /* On mouse-over, add a grey background color */
   .radio1:hover input ~ .checkmark {
     background-color: #ccc;
+    
   }
   
   /* When the radio button is checked, add a blue background */
