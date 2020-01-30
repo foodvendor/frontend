@@ -1,31 +1,36 @@
-<h2>Todays Menu</h2>
-Welcome {{name}}!
+<div class="div1">
+  <div class="container" style="color: aliceblue;">
+    <h2 style="padding-top: 3em;">Todays Menu</h2>
+    Welcome {{name}}!
+  </div>
+  <div class="container">
+    <table border="1" style="color: aliceblue;">
+      <thead>
+        <tr>
+          <th>Chapati</th>
+          <th>Sabji</th>
+          <th>Rice</th>
+          <th>dal</th>
+          <th>salad</th>
+          <th>sweetDish</th>
+          <th>chatani</th>
+          <th>pickle</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{todaysMenu.chapati}}</td>
+          <td>{{todaysMenu.sabji}}</td>
+          <td>{{todaysMenu.rice}}</td>
+          <td>{{todaysMenu.dal}}</td>
+          <td>{{todaysMenu.salad}}</td>
+          <td>{{todaysMenu.sweetDish}}</td>
+          <td>{{todaysMenu.chatani}}</td>
+          <td>{{todaysMenu.pickle}}</td>
+        </tr>
+      </tbody>
+    </table>
 
-<table border="1">
-  <thead>
-    <tr>
-      <th>Chapati</th>
-      <th>Sabji</th>
-      <th>Rice</th>
-      <th>dal</th>
-      <th>salad</th>
-      <th>sweetDish</th>
-      <th>chatani</th>
-      <th>pickle</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>{{todaysMenu.chapati}}</td>
-      <td>{{todaysMenu.sabji}}</td>
-      <td>{{todaysMenu.rice}}</td>
-      <td>{{todaysMenu.dal}}</td>
-      <td>{{todaysMenu.salad}}</td>
-      <td>{{todaysMenu.sweetDish}}</td>
-      <td>{{todaysMenu.chatani}}</td>
-      <td>{{todaysMenu.pickle}}</td>
-    </tr>
-  </tbody>
-</table>
-
-<button></button>
+    <button></button>
+  </div>
+</div>

@@ -6,7 +6,7 @@ import { LoginService } from '../service/student/login.service';
 @Component({
   selector: 'app-headerbar',
   templateUrl: './headerbar.component.html',
-  styleUrls: ['./headerbar.component.css']
+  
 })
 export class HeaderbarComponent implements OnInit {
 

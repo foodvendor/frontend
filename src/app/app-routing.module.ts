@@ -20,7 +20,7 @@ const routes: Routes = [
   { path: 'myAccount', component: MyAccountComponent,canActivate:[RouteGuardService]},
   { path: 'todaysMenu/:name', component: TodaysMenuComponent ,canActivate:[RouteGuardService]},
   { path: 'bill', component: BillComponent ,canActivate:[RouteGuardService]},
-  { path: 'modify', component: MenuSelectionComponent ,canActivate:[RouteGuardService]},
+  { path: 'selectmenu', component: MenuSelectionComponent },
   {path: 'logout' ,component:LogoutComponent},
   { path:'**',component:ErrorComponent}
 ];

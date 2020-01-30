@@ -9,7 +9,7 @@ import { TodaysMenuService } from '../service/menu/todays-menu.service';
 @Component({
   selector: 'app-todays-menu',
   templateUrl: './todays-menu.component.html',
-  styleUrls: ['./todays-menu.component.css'],
+  
 
 })
 
