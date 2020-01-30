@@ -4,12 +4,12 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HomepageComponent } from './homepage/homepage.component';
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
 @NgModule({
-  declarations: [LoginComponent, RegisterComponent, HomepageComponent],
+  declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
     MaterialModule,
@@ -19,8 +19,7 @@ import { HttpClientModule } from '@angular/common/http';
     NgbModule
   ],
   exports:[
-    LoginComponent,
-    HomepageComponent
+    LoginComponent
    
   ]
 })
