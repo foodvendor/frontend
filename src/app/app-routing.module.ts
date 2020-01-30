@@ -9,6 +9,7 @@ import { TodaysMenuComponent } from './todays-menu/todays-menu.component';
 import { RouteGuardService } from './service/route-guard.service';
 import { ErrorComponent } from './error/error.component';
 import { LogoutComponent } from './logout/logout.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 
 const routes: Routes = [
@@ -16,6 +17,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'homepage', component: HomepageComponent ,canActivate:[RouteGuardService]},
+  { path: 'myAccount', component: MyAccountComponent,canActivate:[RouteGuardService]},
   { path: 'todaysMenu/:name', component: TodaysMenuComponent ,canActivate:[RouteGuardService]},
   { path: 'bill', component: BillComponent ,canActivate:[RouteGuardService]},
   { path: 'modify', component: MenuSelectionComponent ,canActivate:[RouteGuardService]},

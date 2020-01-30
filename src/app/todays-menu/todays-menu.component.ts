@@ -1,18 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { LoginService } from '../service/student/login.service';
+import { Menu } from '../model/menu/menu';
+import { TodaysMenuService } from '../service/menu/todays-menu.service';
 
 
-export class Menu {
-  constructor(
-   public sabji:string, 
-   public sweetDish:string, 
-   public chatani:string,
-   public quantity :number
-  ){ 
-
-  }
-}
 
 
 @Component({
@@ -26,24 +17,21 @@ export class Menu {
 
 export class TodaysMenuComponent implements OnInit {
 
-  name=''
+  name = ''
+  todaysMenu: any;
+  // menu1=new Menu('Anda Curry','Gulab Jamun','Shengdana chatani',1);
 
-  menu1=new Menu('Anda Curry','Gulab Jamun','Shengdana chatani',1);
- 
 
 
-  constructor(private route:ActivatedRoute
-    
-    ) {
-    
-   }
-
-  ngOnInit() {
-   // console.log( this.route.snapshot.params['name'] )
-   this.name=this.route.snapshot.params['name'];
+  constructor(private route: ActivatedRoute,
+    private menusvc:TodaysMenuService) {
+    this.todaysMenu=new Menu();
   }
 
+  ngOnInit() {
+    // console.log( this.route.snapshot.params['name'] )
+    this.name=this.route.snapshot.params['name'];
+    // this.todaysMenu=this.menusvc.getTodaysMenu();
+  }
 
-  
-  
 }

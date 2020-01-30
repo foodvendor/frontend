@@ -13,6 +13,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TodaysMenuComponent } from './todays-menu/todays-menu.component';
 import { ErrorComponent } from './error/error.component';
 import { LogoutComponent } from './logout/logout.component';
+import { MyAccountComponent } from './my-account/my-account.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { LogoutComponent } from './logout/logout.component';
     HomepageComponent,
     TodaysMenuComponent,
     ErrorComponent,
-    LogoutComponent
+    LogoutComponent,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,

@@ -14,6 +14,7 @@ const httpOptions={
 
 export class LoginService {
 
+
   constructor(
     private http:HttpClient
   ) { }
@@ -29,8 +30,20 @@ export class LoginService {
     return !(user ===null)
   }
 
-logout()
-{
+  logout()
+  {
   sessionStorage.removeItem('authenticateUser');
-}
+  }
+  
+  getUserDetails(studentId)
+  {
+
+    return this.http.get<Student>(`http://localhost:8080/getUserDetails/${studentId}`);
+  }
+
+  updateStudentDetails(studentDetails) {
+    console.log(studentDetails);
+   return this.http.put<Student>("http://localhost:8080/jpa/updateStudentDetails",studentDetails).toPromise();
+  }
+
 }

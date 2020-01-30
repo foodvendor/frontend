@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HardcodedAuthServiceService } from '../service/hardcoded-auth-service.service';
+import { LoginService } from '../service/student/login.service';
 
 
 @Component({
@@ -11,7 +12,7 @@ export class HeaderbarComponent implements OnInit {
 
   //isUserLoggedIn:boolean =false;
 
-  constructor(private hardcodedAuthService:HardcodedAuthServiceService) { }
+  constructor(private loginSrvc:LoginService) { }
 
   ngOnInit() {
 

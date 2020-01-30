@@ -10,6 +10,7 @@ import { LoginService } from 'src/app/service/student/login.service';
 })
 export class LoginComponent implements OnInit {
 
+
   message:string='';
   studentName:'';
   student:Student;  
@@ -32,25 +33,17 @@ export class LoginComponent implements OnInit {
 
    this.loginsvc.getLoginDetails(student).then(
      response=>{
+      
       sessionStorage.setItem('authenticateUser',response.studentName);
+      sessionStorage.setItem('authUser',JSON.stringify(response.studentId));
+    
       this.router.navigate(['/todaysMenu',response.studentName]);
       console.log(response);
       
      }).catch(error=>{
       this.invalidLogin=true 
      })
-   
-  //  if(this.loginsvc.getLoginDetails(this.student))
-  //  { 
-     
-  //    this.router.navigate(['todaysMenu',this.student.studentName])
-  //    this.invalidLogin=false;
-  //   // console.log('hello',this.username);
-  //  } 
-  // else
-  // { 
-  //   this.invalidLogin=true 
-  // } 
+  
 
   }
 }
