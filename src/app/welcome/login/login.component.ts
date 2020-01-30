@@ -32,7 +32,10 @@ export class LoginComponent implements OnInit {
 
     this.loginsvc.getLoginDetails(student).then(
       response => {
+
         sessionStorage.setItem('authenticateUser', response.studentName);
+        sessionStorage.setItem('authUser', JSON.stringify(response.studentId));
+
         this.router.navigate(['/todaysMenu', response.studentName]);
         console.log(response);
 
@@ -40,7 +43,6 @@ export class LoginComponent implements OnInit {
         this.invalidLogin = true
       })
 
-    
 
   }
 }

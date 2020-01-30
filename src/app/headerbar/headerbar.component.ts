@@ -12,7 +12,7 @@ export class HeaderbarComponent implements OnInit {
 
   //isUserLoggedIn:boolean =false;
 
-  constructor(private loginSrvc:LoginService) { }
+  constructor(public loginSrvc: LoginService) { }
 
   ngOnInit() {
 

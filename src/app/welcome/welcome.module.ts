@@ -4,19 +4,19 @@ import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { MaterialModule } from '../material/material.module';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-
-import { BrowserModule } from '@angular/platform-browser';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { HttpClientModule } from '@angular/common/http';
+
+
+
+
 @NgModule({
   declarations: [LoginComponent, RegisterComponent],
   imports: [
     CommonModule,
+    HttpClientModule,
     MaterialModule,
     ReactiveFormsModule,
-    FormsModule,BrowserModule,
-    HttpClientModule,
-    NgbModule
+    FormsModule
   ],
   exports:[
     LoginComponent
@@ -24,4 +24,6 @@ import { HttpClientModule } from '@angular/common/http';
   ]
 })
 export class WelcomeModule { }
+
+
 
