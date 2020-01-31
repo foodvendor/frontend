@@ -13,13 +13,14 @@ export class LoginComponent implements OnInit {
   message: string = '';
   studentName: '';
   student: Student;
-  errorMessage = 'Invalid credintals'
+  errorMessage = 'login details record not found'
   invalidLogin = false
   //router is required when one component want to make use of another component
   //Router is the dependency of the login component
   // private loginsvc:LoginService
   constructor(private router: Router,
-    private loginsvc: LoginService) {
+    private loginsvc: LoginService) 
+  {
     this.student = new Student();
   }
 
@@ -27,11 +28,11 @@ export class LoginComponent implements OnInit {
   }
 
   handleLogin(student) {
-    console.log("Inside handleLogin");
-    console.log(student);
 
-    this.loginsvc.getLoginDetails(student).then(
-      response => {
+           console.log("Inside handleLogin");
+           console.log(student);
+       this.loginsvc.getLoginDetails(student).then(
+        response => {
 
         sessionStorage.setItem('authenticateUser', response.studentName);
         sessionStorage.setItem('authUser', JSON.stringify(response.studentId));

@@ -1,8 +1,8 @@
 <!-- <div class="alert alert-success" *ngIf='message'>{{message}}</div> -->
 
-<div class="container" style="background-color: aliceblue; padding-top: 5em;" >
+<div class="container" style="background-color:beige; padding-top: 5em;">
 
-  <form (ngSubmit)="updateDetails(studentDetails)" >
+  <form (ngSubmit)="updateDetails(studentDetails)">
     <div>
       <h1>My Profile</h1>
     </div>
@@ -42,10 +42,9 @@
       <label>Branch Id</label>
       <input class="form-control col-md-6" name="branchId" [(ngModel)]="studentDetails.branchId" required>
     </div>
-    <div>
-      <button type="submit" class="btn btn-success" data-container="body" data-toggle="popover" data-placement="top">
-        Submit
-      </button>
+
+    <div class="form-group">
+      <button type="submit" class="btn btn-success" data-toggle="popover" > Submit</button>
     </div>
 
   </form>
